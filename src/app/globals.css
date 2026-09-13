@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input {
+    @apply w-full rounded-xl border border-ink-600/20 bg-white px-4 py-3 text-sm text-ink-700 placeholder:text-ink-400 focus:border-gold-500 focus:outline-none;
+  }
+}
+
+:root {
+  --font-display: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-body: "Jost", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FDFCFA;
+  color: #332F29;
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background-color: #F3E1B0;
+  color: #221F1A;
+}
+
+/* Subtle marble texture used behind hero / palace sections */
+.marble-surface {
+  background-color: #FAF7F2;
+  background-image:
+    radial-gradient(at 15% 20%, rgba(203,176,138,0.35) 0px, transparent 45%),
+    radial-gradient(at 82% 15%, rgba(184,134,47,0.12) 0px, transparent 40%),
+    radial-gradient(at 50% 85%, rgba(203,176,138,0.25) 0px, transparent 50%),
+    linear-gradient(120deg, transparent 40%, rgba(255,255,255,0.5) 50%, transparent 60%);
+}
+
+.marble-surface-dark {
+  background-color: #EFE6D8;
+  background-image:
+    radial-gradient(at 20% 30%, rgba(255,255,255,0.5) 0px, transparent 40%),
+    radial-gradient(at 80% 70%, rgba(184,134,47,0.18) 0px, transparent 45%),
+    linear-gradient(135deg, rgba(74,68,60,0.06) 0%, transparent 55%);
+}
+
+.gold-shimmer-text {
+  background: linear-gradient(90deg, #946A24, #D9B25B, #F3E1B0, #D9B25B, #946A24);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+.perspective {
+  perspective: 1800px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Palace door-opening interaction (see CategoryDoors component) */
+.door-panel-left,
+.door-panel-right {
+  transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.door-card:hover .door-panel-left,
+.door-card:focus-visible .door-panel-left {
+  transform: rotateY(-100deg);
+}
+.door-card:hover .door-panel-right,
+.door-card:focus-visible .door-panel-right {
+  transform: rotateY(100deg);
+}
+
+/* Thin, elegant scrollbar for a more premium feel */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #DFCEB2;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CBB08A;
+}

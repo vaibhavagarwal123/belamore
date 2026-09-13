@@ -1,0 +1,249 @@
+// Belamore data model.
+// NOTE: provider is "sqlite" for zero-config local development.
+// For production (Vercel, etc.) switch provider to "postgresql" and point
+// DATABASE_URL at a hosted Postgres instance (Neon / Supabase / Railway) —
+// the schema below is fully compatible, no model changes needed.
+// See SETUP.md > "Going to production".
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ---------- Catalogue ----------
+
+model Category {
+  id          String    @id @default(cuid())
+  name        String
+  slug        String    @unique
+  tagline     String?
+  description String?
+  heroImage   String?
+  sortOrder   Int       @default(0)
+  isActive    Boolean   @default(true)
+  products    Product[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Product {
+  id              String          @id @default(cuid())
+  name            String
+  slug            String          @unique
+  shortDescription String?
+  description     String
+  careInstructions String?
+  material        String?
+  priceInPaise    Int
+  compareAtPaise  Int?
+  sku             String          @unique
+  stock           Int             @default(25)
+  isFeatured      Boolean         @default(false)
+  isActive        Boolean         @default(true)
+  categoryId      String
+  category        Category        @relation(fields: [categoryId], references: [id])
+  images          ProductImage[]
+  variants        ProductVariant[]
+  orderItems      OrderItem[]
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  @@index([categoryId])
+}
+
+model ProductImage {
+  id        String   @id @default(cuid())
+  url       String
+  alt       String?
+  sortOrder Int      @default(0)
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+}
+
+// e.g. "Small / Rs 490" vs "Big / Rs 690" size-price options
+model ProductVariant {
+  id           String   @id @default(cuid())
+  label        String
+  priceInPaise Int
+  stock        Int      @default(25)
+  sku          String   @unique
+  productId    String
+  product      Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+}
+
+// ---------- Customers ----------
+
+model Customer {
+  id            String    @id @default(cuid())
+  name          String
+  email         String    @unique
+  passwordHash  String
+  phone         String?
+  addresses     Address[]
+  orders        Order[]
+  createdAt     DateTime  @default(now())
+}
+
+model Address {
+  id         String   @id @default(cuid())
+  customerId String
+  customer   Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  fullName   String
+  line1      String
+  line2      String?
+  city       String
+  state      String
+  postalCode String
+  country    String   @default("India")
+  phone      String
+  isDefault  Boolean  @default(false)
+}
+
+// ---------- Orders ----------
+
+// SQLite has no native enum support, so status/type fields below are plain
+// strings constrained in application code (see src/lib/constants.ts).
+// OrderStatus: PENDING_PAYMENT | PAID | PROCESSING | SHIPPED | DELIVERED | CANCELLED | REFUNDED
+// PaymentProvider: RAZORPAY | STRIPE | COD
+
+model Order {
+  id               String          @id @default(cuid())
+  orderNumber      String          @unique
+  customerId       String?
+  customer         Customer?       @relation(fields: [customerId], references: [id])
+  guestEmail       String?
+  guestName        String?
+  guestPhone       String?
+  shippingLine1    String
+  shippingLine2    String?
+  shippingCity     String
+  shippingState    String
+  shippingPostal   String
+  shippingCountry  String          @default("India")
+  items            OrderItem[]
+  subtotalPaise    Int
+  discountPaise    Int             @default(0)
+  shippingPaise    Int             @default(0)
+  totalPaise       Int
+  discountCodeId   String?
+  discountCode     DiscountCode?   @relation(fields: [discountCodeId], references: [id])
+  giftCardPaise    Int             @default(0)
+  giftCardId       String?
+  status           String          @default("PENDING_PAYMENT")
+  paymentProvider  String          @default("RAZORPAY")
+  paymentRef       String?
+  notes            String?
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+model OrderItem {
+  id            String  @id @default(cuid())
+  orderId       String
+  order         Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId     String
+  product       Product @relation(fields: [productId], references: [id])
+  variantLabel  String?
+  nameSnapshot  String
+  imageSnapshot String?
+  unitPricePaise Int
+  quantity      Int
+}
+
+// ---------- Marketing ----------
+
+model DiscountCode {
+  id            String    @id @default(cuid())
+  code          String    @unique
+  // "PERCENTAGE" | "FIXED"
+  type          String
+  value         Int // percentage (0-100) or fixed amount in paise
+  minOrderPaise Int       @default(0)
+  usageLimit    Int?
+  timesUsed     Int       @default(0)
+  expiresAt     DateTime?
+  isActive      Boolean   @default(true)
+  orders        Order[]
+  createdAt     DateTime  @default(now())
+}
+
+model GiftCard {
+  id                String   @id @default(cuid())
+  code              String   @unique
+  initialValuePaise Int
+  balancePaise      Int
+  isActive          Boolean  @default(true)
+  expiresAt         DateTime?
+  purchaserEmail    String?
+  recipientEmail    String?
+  message           String?
+  createdAt         DateTime @default(now())
+}
+
+model NewsletterSubscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}
+
+model ContactSubmission {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  message   String
+  createdAt DateTime @default(now())
+}
+
+// ---------- Content ----------
+
+model BlogPost {
+  id            String    @id @default(cuid())
+  title         String
+  slug          String    @unique
+  excerpt       String
+  content       String
+  coverImage    String?
+  isPublished   Boolean   @default(true)
+  publishedAt   DateTime  @default(now())
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Testimonial {
+  id         String   @id @default(cuid())
+  authorName String
+  authorRole String?
+  quote      String
+  rating     Int      @default(5)
+  isActive   Boolean  @default(true)
+  sortOrder  Int      @default(0)
+  createdAt  DateTime @default(now())
+}
+
+// Generic key-value content blocks so the admin can edit site copy
+// (hero heading, about page story, contact details, etc.) without redeploying.
+model SiteContent {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+// ---------- Admin ----------
+
+model AdminUser {
+  id           String    @id @default(cuid())
+  email        String    @unique
+  passwordHash String
+  name         String
+  resetToken   String?
+  resetTokenExpiresAt DateTime?
+  createdAt    DateTime  @default(now())
+}
