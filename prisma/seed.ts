@@ -59,7 +59,7 @@ const CATEGORIES: SeedCategory[] = [
           "Carved to resemble an unfurling lotus, this deep urli is a statement centrepiece for entryways and festive tablescapes — fill it with floating petals, water and diyas, or display it as sculpture on its own. Hand-finished by artisans in a single piece of white marble.",
         care: CARE.marble,
         material: "White Marble",
-        images: [2, 3],
+        images: [2, 3, 67, 16, 17],
         featured: true,
       },
       {
@@ -70,7 +70,7 @@ const CATEGORIES: SeedCategory[] = [
           "A smaller, softly rounded urli for side tables and pujas — understated and versatile, letting flowers, floating candles or fruit take centre stage.",
         care: CARE.marble,
         material: "White Marble",
-        images: [34],
+        images: [30],
       },
       {
         name: "White Marble Platter / Decorative Plate",
@@ -80,7 +80,7 @@ const CATEGORIES: SeedCategory[] = [
           "A generously sized marble platter that moves effortlessly from festive serving to everyday styling — dry fruits, mithai, or simply left out as a quiet decorative object on a console.",
         care: CARE.marble,
         material: "White Marble",
-        images: [35],
+        images: [29],
       },
       {
         name: "Onyx Leaf Plate (6\")",
@@ -90,7 +90,7 @@ const CATEGORIES: SeedCategory[] = [
           "Cut in the silhouette of a leaf from richly banded onyx, this plate catches light beautifully when placed near a window or lamp. A striking small-gifting piece that feels far more precious than its size suggests.",
         care: CARE.onyx,
         material: "Imported Onyx",
-        images: [36],
+        images: [37],
       },
       {
         name: "Handcrafted Round Decorative Inlay Plate",
@@ -100,7 +100,7 @@ const CATEGORIES: SeedCategory[] = [
           "Delicate stone inlay work rings the rim of this handcrafted plate, in the Mughal-era pietra dura tradition still practised by artisan families near the Taj Mahal. Choose a size to suit your space, from an intimate 6-inch plate to a grand 10-inch display piece.",
         care: CARE.inlayBrass,
         material: "White Marble with Stone Inlay",
-        images: [37, 38],
+        images: [66, 68],
         variants: [
           { label: "6 inch", price: 2290 },
           { label: "7 inch", price: 2590 },
@@ -117,7 +117,7 @@ const CATEGORIES: SeedCategory[] = [
           "This 9-inch urli pairs a wide, elegant bowl with intricate floral inlay work along its rim — a piece equally suited to festive floating-flower displays and year-round decor.",
         care: CARE.inlayBrass,
         material: "White Marble with Stone Inlay",
-        images: [39],
+        images: [3],
       },
       {
         name: "Marble Urli in Plain White Marble (9\")",
@@ -127,7 +127,7 @@ const CATEGORIES: SeedCategory[] = [
           "For those who prefer quiet elegance, this 9-inch urli is left unadorned — letting the natural marble grain and the water or flowers it holds do the talking.",
         care: CARE.marble,
         material: "White Marble",
-        images: [40],
+        images: [2],
       },
     ],
   },
@@ -146,7 +146,7 @@ const CATEGORIES: SeedCategory[] = [
           "A dainty, almond-shaped diya pairing pale marble with a polished brass well — perfect lined up in rows along a window ledge or entrance for Diwali and every festival after.",
         care: CARE.inlayBrass,
         material: "Marble & Brass",
-        images: [16],
+        images: [21],
       },
       {
         name: "Flower Shape Marble and Brass Diya",
@@ -156,7 +156,7 @@ const CATEGORIES: SeedCategory[] = [
           "Shaped like an open flower, this diya brings a softer, more ornamental silhouette to your festive lighting — beautiful individually or gathered in threes and fives.",
         care: CARE.inlayBrass,
         material: "Marble & Brass",
-        images: [17],
+        images: [25],
       },
       {
         name: "Lotus Shaped Marble and Brass Diya (5\")",
@@ -166,7 +166,7 @@ const CATEGORIES: SeedCategory[] = [
           "A more substantial lotus-form diya, its petals radiating out from a gleaming brass centre — a beautiful anchor piece for a puja table or festive console.",
         care: CARE.inlayBrass,
         material: "Marble & Brass",
-        images: [18],
+        images: [26],
         featured: true,
       },
       {
@@ -177,7 +177,7 @@ const CATEGORIES: SeedCategory[] = [
           "Cut from richly veined imported onyx, this diya glows softly from within when lit — a subtle, luminous alternative to plain marble.",
         care: CARE.onyx,
         material: "Imported Onyx",
-        images: [19],
+        images: [24],
       },
       {
         name: "Yin-Yang Marble T-Light Holder Set",
@@ -187,7 +187,7 @@ const CATEGORIES: SeedCategory[] = [
           "Two smooth, pebble-like t-light holders in white marble with mirrored gold-toned wells — set them together or apart, always in quiet balance with each other.",
         care: CARE.inlayBrass,
         material: "White Marble & Brass",
-        images: [20, 24],
+        images: [20],
         featured: true,
       },
       {
@@ -198,7 +198,7 @@ const CATEGORIES: SeedCategory[] = [
           "Simple, sculptural t-light holders in a range of gentle forms — collect a few different shapes for an eclectic, elegant tablescape.",
         care: CARE.marble,
         material: "White Marble",
-        images: [21],
+        images: [22],
       },
       {
         name: "Candle / T-Light Holder with Intricate Inlay",
@@ -208,7 +208,7 @@ const CATEGORIES: SeedCategory[] = [
           "Fine stone inlay traces the surface of this candle holder, available with or without an openwork jaali lid that scatters warm light across the room when lit.",
         care: CARE.inlayBrass,
         material: "White Marble with Stone Inlay",
-        images: [22],
+        images: [23],
       },
       {
         name: "T-Light Holder with Intricate Latticework (Jaali)",
@@ -218,7 +218,7 @@ const CATEGORIES: SeedCategory[] = [
           "Hand-carved jaali (perforated lattice) wraps this holder entirely, casting intricate shadow patterns across the walls when a candle flickers inside — a showpiece even unlit.",
         care: CARE.marble,
         material: "White Marble",
-        images: [23, 29],
+        images: [47],
       },
       {
         name: "Soapstone Diffuser with Brass Top",
@@ -228,7 +228,7 @@ const CATEGORIES: SeedCategory[] = [
           "A tea-light oil diffuser carved from soapstone with a fitted brass top — gently warm your favourite essential oils to scent a room, festival or otherwise.",
         care: CARE.soapstone,
         material: "Soapstone & Brass",
-        images: [25],
+        images: [28],
       },
       {
         name: "Tall Incense and Dhoop Holder",
@@ -238,7 +238,7 @@ const CATEGORIES: SeedCategory[] = [
           "A tall marble stand designed to catch ash neatly while your incense or dhoop burns — a graceful everyday ritual object rather than an afterthought.",
         care: CARE.marble,
         material: "White Marble",
-        images: [26, 30],
+        images: [27],
       },
       {
         name: "Chakra Incense Holder",
@@ -248,7 +248,7 @@ const CATEGORIES: SeedCategory[] = [
           "A circular, meditative incense holder inspired by the chakra motif — available in serene white marble or a deeper, more dramatic black marble finish.",
         care: CARE.marble,
         material: "Marble",
-        images: [27],
+        images: [40],
         variants: [
           { label: "White Marble", price: 1200 },
           { label: "Black Marble", price: 1600 },
@@ -262,7 +262,7 @@ const CATEGORIES: SeedCategory[] = [
           "A devotional Shivling hand-carved from a single piece of pure white marble, available in two sizes for home mandirs of any scale.",
         care: CARE.marble,
         material: "White Marble",
-        images: [28, 31],
+        images: [41],
         variants: [
           { label: "Small", price: 490 },
           { label: "Big", price: 690 },
@@ -275,7 +275,7 @@ const CATEGORIES: SeedCategory[] = [
     tagline: "Small daily luxuries, set on real stone",
     description:
       "Coaster sets in soapstone, marble, onyx and brass — the easiest way to bring Belamore's craftsmanship into everyday moments, one cup of chai or evening drink at a time.",
-    heroImage: img(41),
+    heroImage: img(34),
     products: [
       {
         name: "Elephant Design Soapstone Coaster",
@@ -285,7 +285,7 @@ const CATEGORIES: SeedCategory[] = [
           "A set of soapstone coasters hand-carved with a gentle elephant motif — a symbol of good fortune, set beneath your everyday cup.",
         care: CARE.soapstone,
         material: "Soapstone",
-        images: [41],
+        images: [34],
       },
       {
         name: "Peacock Design Soapstone Coasters",
@@ -295,7 +295,7 @@ const CATEGORIES: SeedCategory[] = [
           "Delicately carved with India's national bird, these soapstone coasters bring a touch of ornament to your coffee table or dining setting.",
         care: CARE.soapstone,
         material: "Soapstone",
-        images: [42],
+        images: [35, 36],
       },
       {
         name: "Inlay Work Marble Coasters with Holder (Set of 6)",
@@ -305,7 +305,7 @@ const CATEGORIES: SeedCategory[] = [
           "A complete set of six coasters, each finished with fine stone inlay, presented in a matching marble holder — an easy, ready-to-gift set for any home.",
         care: CARE.inlayBrass,
         material: "White Marble with Stone Inlay",
-        images: [43],
+        images: [42],
         featured: true,
       },
       {
@@ -316,7 +316,7 @@ const CATEGORIES: SeedCategory[] = [
           "Four round coasters that pair cool white marble with warm mango wood — a modern, understated pick for contemporary tables.",
         care: CARE.woodMarble,
         material: "Marble & Mango Wood",
-        images: [44],
+        images: [43],
       },
       {
         name: "Square Marble and Wood Coasters (Set of 4)",
@@ -326,7 +326,7 @@ const CATEGORIES: SeedCategory[] = [
           "The square sibling to our round marble-and-wood coasters — clean geometry, natural materials, four to a set.",
         care: CARE.woodMarble,
         material: "Marble & Mango Wood",
-        images: [45],
+        images: [44],
       },
       {
         name: "White Marble and Brass Coasters (Set of 2)",
@@ -336,7 +336,7 @@ const CATEGORIES: SeedCategory[] = [
           "Two marble coasters ringed in polished brass — a small, luxurious detail for a housewarming gift or your own dining table.",
         care: CARE.inlayBrass,
         material: "White Marble & Brass",
-        images: [46],
+        images: [45],
       },
       {
         name: "Marble Coasters with Brass Dragonfly (Set of 2)",
@@ -346,7 +346,7 @@ const CATEGORIES: SeedCategory[] = [
           "A pair of coasters finished with a delicate brass dragonfly motif — playful, elegant, and a lovely small gift on its own.",
         care: CARE.inlayBrass,
         material: "White Marble & Brass",
-        images: [47],
+        images: [46],
       },
     ],
   },
@@ -380,7 +380,7 @@ const CATEGORIES: SeedCategory[] = [
           "A small, weighty apple carved from glowing imported onyx — equally at home on a work desk or a bookshelf.",
         care: CARE.onyx,
         material: "Imported Onyx",
-        images: [50],
+        images: [58],
       },
       {
         name: "Imported Onyx Dice Paperweight (2\")",
@@ -390,7 +390,7 @@ const CATEGORIES: SeedCategory[] = [
           "A graphic, geometric dice paperweight in banded onyx — a quietly playful desk object with real heft.",
         care: CARE.onyx,
         material: "Imported Onyx",
-        images: [51],
+        images: [59],
       },
       {
         name: "Imported Decorative Onyx Table Clock (Heart Shape)",
@@ -400,7 +400,7 @@ const CATEGORIES: SeedCategory[] = [
           "A working table clock carved into a soft heart silhouette from imported onyx — a sentimental, functional keepsake for anniversaries and milestone gifts.",
         care: CARE.onyx,
         material: "Imported Onyx",
-        images: [52],
+        images: [69],
       },
     ],
   },
@@ -409,7 +409,7 @@ const CATEGORIES: SeedCategory[] = [
     tagline: "Where the smallest, most precious things live",
     description:
       "Hand-carved boxes for jewellery, trinkets and treasures — each lid finished with fine stone inlay or delicate jaali work, built to be handed down.",
-    heroImage: img(63),
+    heroImage: img(57),
     products: [
       {
         name: "Rectangular Jewellery Box with Inlay Work and Lid (6\"x4\")",
@@ -419,7 +419,7 @@ const CATEGORIES: SeedCategory[] = [
           "A generously sized jewellery box in white marble, its lid and sides finished with fine floral inlay work — available in single-colour or multi-coloured stone detailing.",
         care: CARE.inlayBrass,
         material: "White Marble with Stone Inlay",
-        images: [63],
+        images: [57],
         featured: true,
       },
       {
@@ -430,7 +430,7 @@ const CATEGORIES: SeedCategory[] = [
           "Inlay work crowns the lid while openwork jaali wraps the sides of this storage box — a striking piece that looks as good closed as open.",
         care: CARE.inlayBrass,
         material: "White Marble with Stone Inlay",
-        images: [64],
+        images: [73],
       },
       {
         name: "Hexagon Storage Box with Inlay Work (5\")",
@@ -440,7 +440,7 @@ const CATEGORIES: SeedCategory[] = [
           "A hexagonal silhouette sets this storage box apart — hand-carved from a single piece of marble and finished with intricate inlay across its lid.",
         care: CARE.inlayBrass,
         material: "White Marble with Stone Inlay",
-        images: [65],
+        images: [76],
       },
       {
         name: "Elephant Jewellery Box with Inlay Work",
@@ -450,7 +450,7 @@ const CATEGORIES: SeedCategory[] = [
           "Carved from one solid piece of marble with elephants processing around every side, then finished with fine inlay work — available in three sizes to suit any dressing table.",
         care: CARE.inlayBrass,
         material: "White Marble with Stone Inlay",
-        images: [66, 67],
+        images: [75],
         variants: [
           { label: "3 inch diameter", price: 1990 },
           { label: "5 inch diameter", price: 2990 },
@@ -466,7 +466,7 @@ const CATEGORIES: SeedCategory[] = [
           "A softly domed lid gives this storage box a distinctive silhouette, finished all over with delicate hand-set stone inlay.",
         care: CARE.inlayBrass,
         material: "White Marble with Stone Inlay",
-        images: [68],
+        images: [77],
       },
       {
         name: "Luxury Marble Tissue Box with Inlay Work and Jaali Lid",
@@ -476,7 +476,7 @@ const CATEGORIES: SeedCategory[] = [
           "An everyday object elevated — this tissue box wears the same inlay and jaali craftsmanship as our finest keepsake boxes, so nothing on your table feels ordinary.",
         care: CARE.inlayBrass,
         material: "White Marble with Stone Inlay",
-        images: [69],
+        images: [50],
       },
     ],
   },
@@ -485,7 +485,7 @@ const CATEGORIES: SeedCategory[] = [
     tagline: "Everyday rituals, made from stone",
     description:
       "Dessert bowls, condiment sets and a marble-and-wood board — pieces designed for the table you set most often.",
-    heroImage: img(70),
+    heroImage: img(39),
     products: [
       {
         name: "Pure White Marble Dessert Bowls",
@@ -495,7 +495,7 @@ const CATEGORIES: SeedCategory[] = [
           "Smooth, weighty little bowls in pure white marble — beautiful for dessert, dry fruits, or a scoop of ice cream that suddenly feels a little more special.",
         care: CARE.marble,
         material: "White Marble",
-        images: [70],
+        images: [39, 38],
         variants: [
           { label: "Set of 2", price: 990 },
           { label: "Set of 4", price: 1790 },
@@ -510,7 +510,7 @@ const CATEGORIES: SeedCategory[] = [
           "A set of small marble containers on a matching tray — perfect for pickles, chutneys and condiments at the table, or salt and spices by the stove.",
         care: CARE.marble,
         material: "White Marble",
-        images: [73],
+        images: [51],
       },
       {
         name: "White Marble and Wood Platter / Chopping Board",
@@ -564,7 +564,7 @@ const CATEGORIES: SeedCategory[] = [
           "A refined card holder for a desk or reception counter, its face finished with fine stone inlay — the kind of detail clients notice.",
         care: CARE.inlayBrass,
         material: "White Marble with Stone Inlay",
-        images: [57],
+        images: [42],
       },
     ],
   },
@@ -573,7 +573,7 @@ const CATEGORIES: SeedCategory[] = [
     tagline: "For the gestures that need to say more",
     description:
       "Signature showpieces for clients, leadership and guest speakers — a marble Taj Mahal, wine sets and curated gift hampers built for the moments that matter most in business.",
-    heroImage: img(58),
+    heroImage: img(63),
     products: [
       {
         name: "Marble Replica of the Taj Mahal (7\")",
@@ -583,7 +583,7 @@ const CATEGORIES: SeedCategory[] = [
           "Carved by artisan families who trace their craft directly back to the builders of the Taj Mahal, this 7-inch replica is Belamore's most requested leadership and legacy gift — a piece with a story built into the stone itself.",
         care: CARE.marble,
         material: "White Marble",
-        images: [58],
+        images: [63],
         featured: true,
       },
       {
@@ -594,7 +594,7 @@ const CATEGORIES: SeedCategory[] = [
           "A pair of wine glasses hand-carved from white marble, presented on a matching tray — an unusual, memorable gift for hosts and clients alike.",
         care: CARE.marble,
         material: "White Marble",
-        images: [59],
+        images: [64],
       },
       {
         name: "Wine Glasses with Inlay Work and Matching Tray (Set of 2)",
@@ -604,7 +604,7 @@ const CATEGORIES: SeedCategory[] = [
           "The elevated version of our marble wine glass set, finished with intricate inlay work across the tray and glasses — a true showpiece gift.",
         care: CARE.inlayBrass,
         material: "White Marble with Stone Inlay",
-        images: [60],
+        images: [65],
       },
       {
         name: "Curated Corporate Gift Hamper",
@@ -614,7 +614,7 @@ const CATEGORIES: SeedCategory[] = [
           "Belamore's signature hamper service — mix and match two or more products from across our collections into a single beautifully packaged hamper, customised with names, logos or messages for employees, clients and leadership. Price shown is a starting point; final pricing depends on the pieces and quantity you choose. Bulk pricing available: 5% off for 10–49 units, 10% off for 50–199 units, 15% off for 200+ units.",
         care: CARE.marble,
         material: "Mixed Marble Pieces",
-        images: [74, 75, 76, 77, 83],
+        images: [70, 83],
         featured: true,
       },
     ],
