@@ -53,17 +53,18 @@ export function Footer({
 
           <div>
             <h4 className="font-display text-sm uppercase tracking-widest text-ink-700">Stay in Touch</h4>
-            <p className="mt-4 text-sm text-ink-500">
-              {phone} · {email}
-            </p>
-            <a
-              href={instagram}
-              target="_blank"
-              rel="noreferrer"
-              className="text-sm text-ink-500 hover:text-gold-600"
-            >
-              @BelamoreGifts
-            </a>
+            <div className="mt-4 space-y-1.5 text-sm text-ink-500">
+              <p>{phone}</p>
+              <p>{email}</p>
+              <a
+                href={instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="block hover:text-gold-600"
+              >
+                @BelamoreGifts
+              </a>
+            </div>
             <div className="mt-5">
               <NewsletterForm />
             </div>
