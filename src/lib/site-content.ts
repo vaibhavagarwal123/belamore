@@ -7,7 +7,7 @@ const DEFAULTS: Record<string, string> = {
   "about.story":
     "Belamore — derived from the Italian words 'Bel' (Beautiful) and 'Amore' (Love) — embodies the essence of infinite, beautiful love.",
   "contact.phone": "+91 88600 04976",
-  "contact.email": "hello@belamoregifts.com",
+  "contact.email": "info@belamore.in",
   "contact.instagram": "https://instagram.com/BelamoreGifts",
   "contact.address": "Belamore Gifts, India — Pan-India Delivery",
 };

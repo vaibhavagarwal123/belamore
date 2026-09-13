@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
   const submission = await db.contactSubmission.create({ data: parsed.data });
 
   await sendMail({
-    to: process.env.SMTP_FROM || "hello@belamoregifts.com",
+    to: process.env.SMTP_FROM || "info@belamore.in",
     subject: `New enquiry from ${parsed.data.name}`,
     text: `${parsed.data.message}\n\nFrom: ${parsed.data.name} <${parsed.data.email}> ${parsed.data.phone ?? ""}`,
   }).catch(() => {});

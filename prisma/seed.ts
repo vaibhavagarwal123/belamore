@@ -782,7 +782,7 @@ async function main() {
       },
       {
         key: "contact.email",
-        value: "hello@belamoregifts.com",
+        value: "info@belamore.in",
       },
       {
         key: "contact.instagram",
